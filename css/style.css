@@ -1,0 +1,72 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@font-face {
+    font-family: Didot;
+    src: url(../fonts/Didot.otf);
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    *zoom: 1;
+    position: relative;
+    width: 100%;
+}
+
+header, article {
+    padding: 2%;
+    font-family: 'Didot', times, serif;
+    width: 96%;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    margin-top: 5%;
+}
+
+article, .lang {
+    color: #a39468;
+}
+
+.lang {
+    float: left;
+    width: 42%;
+    padding: 4%;
+    text-align: left;
+}
+
+.lang:first-child {
+    text-align: right;
+
+}
+
+menu {
+    width: 92%;
+    padding: 4%;
+    margin-bottom: 20px;
+}
+
+#sidebar-toggle {
+    right: 0;
+    top: 0;
+    z-index: 5000;
+}
+
+#sidebar-toggle .bar {
+    display: block;
+    width: 18px;
+    margin-bottom: 4px;
+    height: 2px;
+    background-color: #a39468;
+}
+
+#sidebar-toggle .bar:last-child {
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    margin: 10% auto;
+}
