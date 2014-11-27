@@ -115,11 +115,15 @@ img {
 .mobile-navigation input {
     border: none;
     border-bottom: 1px solid #a39468;
-    margin: 20px 0 0 10px;
     width: 120px;
     border-radius: 0;
     font-size: 16px;
-    line-height: 16px;
+    margin-top: 50px;
+}
+
+.mobile-navigation table span {
+    height: 20px;
+    padding: 10px;   
 }
 
 #end {
