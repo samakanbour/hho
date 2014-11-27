@@ -13,6 +13,10 @@ body {
     width: 100%;
 }
 
+header {
+    font-size: 1.2em;
+}
+
 header, article {
     padding: 2%;
     font-family: 'Didot', times, serif;
@@ -38,7 +42,6 @@ article, .lang {
 
 .lang:first-child {
     text-align: right;
-
 }
 
 menu {
@@ -68,5 +71,5 @@ menu {
 img {
     display: block;
     width: 100%;
-    margin: 10% auto;
+    margin: 5% auto;
 }
