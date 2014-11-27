@@ -8,19 +8,38 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="shortcut icon" href="img/logo.jpg">
 	<title>HH</title>
-	<!-- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-	<!-- // <script type="text/javascript" src="js/script.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css">
 	<link type="text/css" rel="stylesheet" media="all" href="css/style.css">
 </head>
 
 <body>
+<div class="mobile-navigation">
+	<menu>
+		<a>
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a>
+		<a id="home"><span class='fa fa-home'></span></a>
+	</menu>
+	<table>
+		<tr><td><a>NEWS</a></td></tr>
+		<tr><td><a>ROLES</a></td></tr>
+		<tr><td><a>GALLERY</a></td></tr>
+		<tr><td><a>SPEECHES</a></td></tr>
+		<tr><td><a>CONTACT</a></td></tr>
+	</table>
+	<div id="end"></div>
+</div>
 <menu>
 	<a id="sidebar-toggle">
 		<span class="bar"></span>
 		<span class="bar"></span>
 		<span class="bar"></span>
 	</a>
+	<a id="home"><span class='fa fa-home'></span></a>
 </menu>
 <header>&nbsp;&nbsp;&nbsp;&nbsp;Her Highness<br>SHEIKHA MOZA<br>BINT NASSER</header>
 <article>Chairperson of Qatar Foundation<br>Vice Chair of the Supreme<br>Council of Education</article>
@@ -30,5 +49,13 @@
 	<div class="lang"><a>AR</a></div>
 	<div class="lang"><a>EN</a></div>
 </footer>
+<script type="text/javascript">
+	$('#sidebar-toggle').click(function(){
+		$('.mobile-navigation').fadeIn();
+	})
+	$('#home').click(function(){
+		$('.mobile-navigation').fadeOut();
+	})
+</script>
 </body>
 </html>
