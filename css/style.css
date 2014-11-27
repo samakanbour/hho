@@ -37,7 +37,7 @@ footer {
     margin-top: 5%;
 }
 
-article, .lang, #home {
+article, .lang, .fa {
     color: #a39468;
 }
 
@@ -110,6 +110,16 @@ img {
 .mobile-navigation table {
     width: 100%;
     border-spacing: 0;
+}
+
+.mobile-navigation input {
+    border: none;
+    border-bottom: 1px solid #a39468;
+    margin: 20px 0 0 10px;
+    width: 120px;
+    /*height: 40px;*/
+    font-size: 16px;
+    line-height: 16px;
 }
 
 #end {
