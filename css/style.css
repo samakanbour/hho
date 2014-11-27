@@ -118,12 +118,13 @@ img {
     width: 120px;
     border-radius: 0;
     font-size: 16px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .mobile-navigation table span {
     height: 20px;
-    padding: 10px;   
+    padding: 10px;
+    margin-left: -40px;  
 }
 
 #end {
