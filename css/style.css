@@ -141,7 +141,7 @@ img {
     margin: 0;
     text-align: center;
     line-height: 2em;
-    overflow: hidden;
+    /*overflow: hidden;*/
     font-size: 1.3em;
     background-color: #fff;
 }
