@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @font-face {
     font-family: Didot;
     src: url(../fonts/Didot.otf);
@@ -8,17 +8,19 @@ body {
     font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     margin: 0;
-    font-family: Helvetica, sans-serif;
     *zoom: 1;
     position: relative;
     width: 100%;
-    /*overflow: hidden;*/
 }
 
 a, a:focus, a:active, input {
     text-decoration: none;
     background-color: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+strong {
+    font-weight: 700;
 }
 
 .selected:after {
@@ -36,19 +38,19 @@ header {
     font-size: 1.2em;
 }
 
-header, article {
+header, h3 {
     padding: 2%;
-    font-family: 'Didot', times, serif;
+    font-family: 'Didot', serif;
     width: 96%;
     text-align: center;
 }
 
 footer {
     width: 100%;
-    margin-top: 5% 0;
+    margin: 5% 0;
 }
 
-article, .lang, .fa {
+h3, .lang, .fa {
     color: #a39468;
 }
 
@@ -57,7 +59,7 @@ article, .lang, .fa {
     font-weight: lighter;
 }
 
-.fa-angle-left {
+table .fa-angle-left {
     display: none;
 }
 
@@ -154,4 +156,29 @@ img {
 .inner {
     display: none;
     font-size: .9em;
+}
+
+section {
+    width: 92%;
+    padding: 4%;
+    color: #a39468;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+
+article {
+    width: 84%;
+    margin: 4%;
+    padding: 4%;
+    border-top: 1px solid #a39468;
+    line-height: 1.3em;
+}
+
+article span {
+    color: #555;
+}
+
+.fa-angle-right {
+    float: right;
 }

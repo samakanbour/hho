@@ -43,22 +43,32 @@
 	</div>
 	<div class="home-page">
 		<menu>
+			<a id="home" href="index.html"><span class='fa fa-home'></span></a>
 			<a id="bars"><span class='fa fa-bars'></span></a>
 		</menu>
-		<header>&nbsp;&nbsp;&nbsp;&nbsp;Her Highness<br>SHEIKHA MOZA<br>BINT NASSER</header>
-		<h3>Chairperson of Qatar Foundation<br>Vice Chair of the Supreme<br>Council of Education</h3>
-		<img src="img/home.jpg">
-		<h3>“Education is a fundamental right<br>A right that no one should be deprived of.”</h3>
-		<footer>
-			<div class="lang"><a>AR</a></div>
-			<div class="lang"><a>EN</a></div>
-		</footer>
+		<section><span class='fa fa-angle-left'></span>&nbsp;EDUCATION</section>
+		<article>
+			<strong>Education in Kenya<span class='fa fa-angle-right'></span></strong>
+			<br><span>November 5, 2014</span>
+			<br>Education above all launches multi-sector education project in Kenyan refugee camp.
+		</article>
+		<article>
+			<strong>Global needs of out-of-school children<span class='fa fa-angle-right'></span></strong>
+			<br><span>April 29, 2014</span>
+			<br>I hope to see coherence being built between different sectors, business, education, finance, health, sanitation and security.
+		</article>
+		<article>
+			<strong>Fundamental rights to Education <span class='fa fa-angle-right'></span></strong>
+			<br><span>April 21, 2014</span>
+			<br>HH Sheikha Moza meets education ministers to accelerate access to quality primary education.
+		</article>
+
 	</div>
 	<script type="text/javascript">
 		$('#bars, .fa-angle-left').click(function(){
 			$('.home-page').hide();
 			$('.inner').hide();
-			$('.fa-angle-left').hide();
+			$('table .fa-angle-left').hide();
 			$('.mobile-navigation').fadeIn();
 			$('.upper').fadeIn();
 			$('#news').removeClass("selected");
@@ -66,12 +76,12 @@
 		$('#home').click(function(){
 			$('.mobile-navigation').fadeOut();
 			$('#news').removeClass("selected");
-			$('.fa-angle-left').hide();
+			$('table .fa-angle-left').hide();
 			$('.home-page').delay(1000).fadeIn();
 		})
 		$('#news').click(function(){
 			$('#news').addClass("selected");
-			$('.fa-angle-left').fadeIn();
+			$('table .fa-angle-left').fadeIn();
 			$('.upper').fadeOut();
 			$('.inner').delay(1200).fadeIn();
 		})
