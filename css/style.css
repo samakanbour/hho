@@ -12,7 +12,7 @@ body {
     *zoom: 1;
     position: relative;
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 a, a:focus, a:active, input {
