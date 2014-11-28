@@ -21,6 +21,17 @@ a, a:focus, a:active, input {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.selected:after {
+    content: '';
+    position: absolute;
+    left: 44%;
+    width: 12%;
+    bottom: 1px;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: #a39468; 
+}
+
 header {
     font-size: 1.2em;
 }
@@ -39,6 +50,19 @@ footer {
 
 article, .lang, .fa {
     color: #a39468;
+}
+
+.fa {
+    font-size: 1.3em;
+    font-weight: lighter;
+}
+
+.fa-angle-left {
+    display: none;
+}
+
+.fa-search {
+    font-size: 1em;
 }
 
 .lang {
@@ -61,27 +85,8 @@ menu {
     margin-bottom: 20px;
 }
 
-#sidebar-toggle {
-    float: left;
-    margin-top: 5px;
-}
-
-#sidebar-toggle .bar {
-    display: block;
-    width: 18px;
-    margin-bottom: 4px;
-    height: 2px;
-    background-color: #a39468;
-}
-
-#sidebar-toggle .bar:last-child {
-    margin-bottom: 0;
-}
-
 #home {
     float: right;
-    font-size: 1.5em;
-    font-weight: lighter;
 }
 
 img {
@@ -95,8 +100,9 @@ img {
     position: fixed;
     z-index: 1000;
     top: 0;
-    height: 200%;
+    height: 100%;
     width: 100%;
+    background-color: #fff;
     -webkit-transition-property: display;
     -moz-transition-property: display;
     -o-transition-property: display;
@@ -127,12 +133,6 @@ img {
     margin-left: -30px;  
 }
 
-#end {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-}
-
 .mobile-navigation td {
     position: relative;
     right: 0;
@@ -153,4 +153,9 @@ img {
     text-decoration: none;
     display: block;
     margin-top: 20px;
+}
+
+.inner {
+    display: none;
+    font-size: .9em;
 }

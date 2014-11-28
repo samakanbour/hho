@@ -8,56 +8,67 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="shortcut icon" href="img/logo.jpg">
 	<title>HH</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css">
 	<link type="text/css" rel="stylesheet" media="all" href="css/style.css">
 </head>
 
 <body>
-<div class="mobile-navigation">
+	<div class="mobile-navigation">
+		<menu>
+			<a id="home"><span class='fa fa-home'></span></a>
+		</menu>
+		<table>
+			<tr><td><a><span class='fa fa-angle-left' id="back-home"></span><sub id="news">NEWS</sub></a></td></tr>
+
+			<tr><td class="inner"><a></a></td></tr>
+			<tr><td class="inner"><a>EDUCATION</a></td></tr>
+			<tr><td class="inner"><a>HEALTHCARE</a></td></tr>
+			<tr><td class="inner"><a>ENVIRONMENT</a></td></tr>
+			<tr><td class="inner"><a>PUBLIC RELATIONS</a></td></tr>
+			<tr><td class="inner"><a>FAMILY</a></td></tr>
+			<tr><td class="inner"><a></a></td></tr>
+			<tr><td class="inner"><span class='fa fa-search'></span><input></td></tr>
+
+			<tr><td class="upper"><a>ROLES</a></td></tr>
+			<tr><td class="upper"><a>GALLERY</a></td></tr>
+			<tr><td class="upper"><a>SPEECHES</a></td></tr>
+			<tr><td class="upper"><a>CONTACT</a></td></tr>
+			<tr><td class="upper"><a></a></td></tr>
+			<tr><td class="upper"><span class='fa fa-search'></span><input></td></tr>
+		</table>
+	</div>
 	<menu>
-		<a>
-			<span class="bar"></span>
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</a>
-		<a id="home"><span class='fa fa-home'></span></a>
+		<a id="bars"><span class='fa fa-bars'></span></a>
 	</menu>
-	<table>
-		<tr><td><a>NEWS</a></td></tr>
-		<tr><td><a>ROLES</a></td></tr>
-		<tr><td><a>GALLERY</a></td></tr>
-		<tr><td><a>SPEECHES</a></td></tr>
-		<tr><td><a>CONTACT</a></td></tr>
-		<tr><td><a></a></td></tr>
-		<tr><td><span class='fa fa-search'></span><input></td></tr>
-	</table>
-	<div id="end"></div>
-</div>
-<menu>
-	<a id="sidebar-toggle">
-		<span class="bar"></span>
-		<span class="bar"></span>
-		<span class="bar"></span>
-	</a>
-	<!-- <a id="home"><span class='fa fa-home'></span></a> -->
-</menu>
-<header>&nbsp;&nbsp;&nbsp;&nbsp;Her Highness<br>SHEIKHA MOZA<br>BINT NASSER</header>
-<article>Chairperson of Qatar Foundation<br>Vice Chair of the Supreme<br>Council of Education</article>
-<img src="img/home.jpg">
-<article>“Education is a fundamental right<br>A right that no one should be deprived of.”</article>
-<footer>
-	<div class="lang"><a>AR</a></div>
-	<div class="lang"><a>EN</a></div>
-</footer>
-<script type="text/javascript">
-	$('#sidebar-toggle').click(function(){
-		$('.mobile-navigation').fadeIn();
-	})
-	$('#home').click(function(){
-		$('.mobile-navigation').fadeOut();
-	})
-</script>
+	<header>&nbsp;&nbsp;&nbsp;&nbsp;Her Highness<br>SHEIKHA MOZA<br>BINT NASSER</header>
+	<article>Chairperson of Qatar Foundation<br>Vice Chair of the Supreme<br>Council of Education</article>
+	<img src="img/home.jpg">
+	<article>“Education is a fundamental right<br>A right that no one should be deprived of.”</article>
+	<footer>
+		<div class="lang"><a>AR</a></div>
+		<div class="lang"><a>EN</a></div>
+	</footer>
+	<script type="text/javascript">
+		$('#bars, #back-home').click(function(){
+			$('.inner').hide();
+			$('.fa-angle-left').hide();
+			$('.mobile-navigation').fadeIn();
+			$('.upper').fadeIn();
+			$('#news').removeClass("selected");
+		})
+		$('#home').click(function(){
+			$('.mobile-navigation').fadeOut();
+			$('#news').removeClass("selected");
+			$('.fa-angle-left').hide();
+		})
+		$('#news').click(function(){
+			$('#news').addClass("selected");
+			$('.fa-angle-left').fadeIn();
+			$('.upper').fadeOut();
+			$('.inner').delay(1200).fadeIn();
+		})
+	</script>
 </body>
 </html>
