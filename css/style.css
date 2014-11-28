@@ -97,10 +97,8 @@ img {
 
 .mobile-navigation {
     display: none;
-    position: fixed;
     z-index: 1000;
-    top: 0;
-    height: 100%;
+    height: 200%;
     width: 100%;
     background-color: #fff;
     -webkit-transition-property: display;
@@ -136,12 +134,10 @@ img {
 .mobile-navigation td {
     position: relative;
     right: 0;
-    /*height: 6%;*/
     width: 100%;
     margin: 0;
     text-align: center;
     line-height: 2em;
-    /*overflow: hidden;*/
     font-size: 1.3em;
     background-color: #fff;
 }

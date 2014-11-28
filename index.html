@@ -20,7 +20,7 @@
 			<a id="home"><span class='fa fa-home'></span></a>
 		</menu>
 		<table>
-			<tr><td><a><span class='fa fa-angle-left' id="back-home"></span><sub id="news">NEWS</sub></a></td></tr>
+			<tr><td><a><span class='fa fa-angle-left' id="back-menu"></span><sub id="news">NEWS</sub></a></td></tr>
 
 			<tr><td class="inner"><a></a></td></tr>
 			<tr><td class="inner"><a>EDUCATION</a></td></tr>
@@ -28,7 +28,9 @@
 			<tr><td class="inner"><a>ENVIRONMENT</a></td></tr>
 			<tr><td class="inner"><a>PUBLIC RELATIONS</a></td></tr>
 			<tr><td class="inner"><a>FAMILY</a></td></tr>
+			<tr><td class="inner"><a></a></td></tr>
 			<tr><td class="inner"><span class='fa fa-search'></span><input></td></tr>
+			<tr><td class="inner"><a></a></td></tr>
 
 			<tr><td class="upper"><a>ROLES</a></td></tr>
 			<tr><td class="upper"><a>GALLERY</a></td></tr>
@@ -36,21 +38,25 @@
 			<tr><td class="upper"><a>CONTACT</a></td></tr>
 			<tr><td class="upper"><a></a></td></tr>
 			<tr><td class="upper"><span class='fa fa-search'></span><input></td></tr>
+			<tr><td class="upper"><a></a></td></tr>
 		</table>
 	</div>
-	<menu>
-		<a id="bars"><span class='fa fa-bars'></span></a>
-	</menu>
-	<header>&nbsp;&nbsp;&nbsp;&nbsp;Her Highness<br>SHEIKHA MOZA<br>BINT NASSER</header>
-	<article>Chairperson of Qatar Foundation<br>Vice Chair of the Supreme<br>Council of Education</article>
-	<img src="img/home.jpg">
-	<article>“Education is a fundamental right<br>A right that no one should be deprived of.”</article>
-	<footer>
-		<div class="lang"><a>AR</a></div>
-		<div class="lang"><a>EN</a></div>
-	</footer>
+	<div class="home-page">
+		<menu>
+			<a id="bars"><span class='fa fa-bars'></span></a>
+		</menu>
+		<header>&nbsp;&nbsp;&nbsp;&nbsp;Her Highness<br>SHEIKHA MOZA<br>BINT NASSER</header>
+		<article>Chairperson of Qatar Foundation<br>Vice Chair of the Supreme<br>Council of Education</article>
+		<img src="img/home.jpg">
+		<article>“Education is a fundamental right<br>A right that no one should be deprived of.”</article>
+		<footer>
+			<div class="lang"><a>AR</a></div>
+			<div class="lang"><a>EN</a></div>
+		</footer>
+	</div>
 	<script type="text/javascript">
-		$('#bars, #back-home').click(function(){
+		$('#bars, #back-menu').click(function(){
+			$('.home-page').hide();
 			$('.inner').hide();
 			$('.fa-angle-left').hide();
 			$('.mobile-navigation').fadeIn();
@@ -61,6 +67,7 @@
 			$('.mobile-navigation').fadeOut();
 			$('#news').removeClass("selected");
 			$('.fa-angle-left').hide();
+			$('.home-page').delay(1000).fadeIn();
 		})
 		$('#news').click(function(){
 			$('#news').addClass("selected");
