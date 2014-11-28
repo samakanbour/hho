@@ -45,7 +45,7 @@ header, article {
 
 footer {
     width: 100%;
-    margin-top: 5%;
+    margin-top: 5% 0;
 }
 
 article, .lang, .fa {
