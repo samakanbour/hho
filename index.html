@@ -33,7 +33,7 @@
 			<tr><td class="inner" style="height:100px;"><a>&nbsp;</a></td></tr>
 
 			<tr><td class="upper"><a>ROLES</a></td></tr>
-			<tr><td class="upper"><a>GALLERY</a></td></tr>
+			<tr><td class="upper"><a id="gallery">GALLERY</a></td></tr>
 			<tr><td class="upper"><a>SPEECHES</a></td></tr>
 			<tr><td class="upper"><a id="contact">CONTACT</a></td></tr>
 			<tr><td class="upper"><a></a></td></tr>
@@ -61,32 +61,90 @@
 			<a id="bars"><span class='fa fa-bars'></span></a>
 		</menu>
 		<section><span class='fa fa-angle-left'></span>&nbsp;CONTACT</section>
+		<article>
+			<strong>Media Enquiries</strong><br>
+			<br><span>Jane Smith</span>
+			<br>Media Officer
+			<br>jane.smith@mozabintnasser.qa
+			<br><div id="phone">+974 3387 2457</div>
+		</article>
+		<article>
+			<strong>Other Enquiries</strong><br>
+			<br><span>James Bond</span>
+			<br>Media Officer
+			<br>james.bond@mozabintnasser.qa
+			<br><div id="phone">+974 3387 2457</div>
+			<br><span>Sarah Heart</span>
+			<br>Media Officer
+			<br>sarah.heart@mozabintnasser.qa
+			<br><div id="phone">+974 3387 2457</div>
+		</article>
+	</div>
+	<div class="page gallery-page">
+		<menu>
+			<a id="home"><span class='fa fa-home'></span></a>
+			<a id="bars"><span class='fa fa-bars'></span></a>
+		</menu>
+		<section><span class='fa fa-angle-left'></span>&nbsp;GALLERY</section>
+		<article>
+			<strong>Education Above All</strong><br>
+			<span>November, 2014</span><br>
+			<br>Global initiative protecting the right of children and youth to quality education.<br>
+			<img src="img/img2.jpg">
+			<div id="share">SHARE</div>
+		</article>
+		<article>
+			<strong>The Qatari-Japanese Friendship</strong><br>
+			<span>March, 2014</span><br>
+			<br>Our partnership can be symbolised by the Qatari-Japanese Friendship Fund.<br>
+			<img src="img/img3.jpg">
+			<div id="share">SHARE</div>
+		</article>
+		<article>
+			<strong>Universal Primary Education</strong><br>
+			<span>March, 2014</span><br>
+			<br>HH wants to galvanise the international community to provide education for 58 million children around the world without access to school.<br>
+			<img src="img/img4.jpg">
+			<div id="share">SHARE</div>
+		</article>
+		<article>
+			<strong>Protection of Education in Insecurity and Armed Conflict</strong><br>
+			<span>February, 2014</span><br>
+			<br>61 million children around the world are not in school, many of them from Arab countries.<br>
+			<img src="img/img5.jpg">
+			<div id="share">SHARE</div>
+		</article>
 	</div>
 	<script type="text/javascript">
 		$('#bars, .fa-angle-left').click(function(){
 			$('.page').hide();
 			$('.inner').hide();
 			$('.fa-angle-left').hide();
+			$('#news').removeClass("selected");
 			$('.mobile-navigation').fadeIn();
 			$('.upper').fadeIn();
-			$('#news').removeClass("selected");
 		})
 		$('a .fa-home').click(function(){
 			$('.mobile-navigation').fadeOut();
 			$('.page').hide();
-			$('#news').removeClass("selected");
+			$('.inner').hide();
 			$('.fa-angle-left').hide();
+			$('#news').removeClass("selected");
 			$('.home-page').delay(1000).fadeIn();
 		})
 		$('#news').click(function(){
 			$('#news').addClass("selected");
 			$('.fa-angle-left').fadeIn();
 			$('.upper').fadeOut();
-			$('.inner').delay(1200).fadeIn();
+			$('.inner').delay(1000).fadeIn();
 		})
 		$('#contact').click(function(){
 			$('.mobile-navigation').fadeOut();
-			$('.contact-page').delay(1200).fadeIn();
+			$('.contact-page').delay(1000).fadeIn();
+		})
+		$('#gallery').click(function(){
+			$('.mobile-navigation').fadeOut();
+			$('.gallery-page').delay(1000).fadeIn();
 		})
 	</script>
 </body>
