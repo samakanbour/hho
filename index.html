@@ -35,13 +35,13 @@
 			<tr><td class="upper"><a>ROLES</a></td></tr>
 			<tr><td class="upper"><a>GALLERY</a></td></tr>
 			<tr><td class="upper"><a>SPEECHES</a></td></tr>
-			<tr><td class="upper"><a>CONTACT</a></td></tr>
+			<tr><td class="upper"><a id="contact">CONTACT</a></td></tr>
 			<tr><td class="upper"><a></a></td></tr>
 			<tr><td class="upper"><span class='fa fa-search'></span><input></td></tr>
 			<tr><td class="upper"><a>&nbsp;</a></td></tr>
 		</table>
 	</div>
-	<div class="home-page">
+	<div class="page home-page">
 		<menu>
 			<a id="bars"><span class='fa fa-bars'></span></a>
 		</menu>
@@ -55,17 +55,25 @@
 		</footer>
 		<div id="bottom"></div>
 	</div>
+	<div class="page contact-page">
+		<menu>
+			<a id="home"><span class='fa fa-home'></span></a>
+			<a id="bars"><span class='fa fa-bars'></span></a>
+		</menu>
+		<section><span class='fa fa-angle-left'></span>&nbsp;CONTACT</section>
+	</div>
 	<script type="text/javascript">
 		$('#bars, .fa-angle-left').click(function(){
-			$('.home-page').hide();
+			$('.page').hide();
 			$('.inner').hide();
 			$('.fa-angle-left').hide();
 			$('.mobile-navigation').fadeIn();
 			$('.upper').fadeIn();
 			$('#news').removeClass("selected");
 		})
-		$('#home').click(function(){
+		$('a .fa-home').click(function(){
 			$('.mobile-navigation').fadeOut();
+			$('.page').hide();
 			$('#news').removeClass("selected");
 			$('.fa-angle-left').hide();
 			$('.home-page').delay(1000).fadeIn();
@@ -75,6 +83,10 @@
 			$('.fa-angle-left').fadeIn();
 			$('.upper').fadeOut();
 			$('.inner').delay(1200).fadeIn();
+		})
+		$('#contact').click(function(){
+			$('.mobile-navigation').fadeOut();
+			$('.contact-page').delay(1200).fadeIn();
 		})
 	</script>
 </body>
