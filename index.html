@@ -8,144 +8,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="shortcut icon" href="img/logo.jpg">
 	<title>HH</title>
-	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="lib/jquery-1.11.0.min.js"></script>
+	<link href="lib/css/font-awesome.min.css" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css">
 	<link type="text/css" rel="stylesheet" media="all" href="css/style.css">
 </head>
 
 <body>
-	<div class="mobile-navigation">
-		<menu>
-			<a id="home"><span class='fa fa-home'></span></a>
-		</menu>
-		<table>
-			<tr><td><a><span class='fa fa-angle-left'></span><sub id="news">NEWS</sub></a></td></tr>
-
-			<tr><td class="inner"><a></a></td></tr>
-			<tr><td class="inner"><a href="edu.html">EDUCATION</a></td></tr>
-			<tr><td class="inner"><a>HEALTHCARE</a></td></tr>
-			<tr><td class="inner"><a>ENVIRONMENT</a></td></tr>
-			<tr><td class="inner"><a>PUBLIC RELATIONS</a></td></tr>
-			<tr><td class="inner"><a>FAMILY</a></td></tr>
-			<tr><td class="inner"><a></a></td></tr>
-			<tr><td class="inner"><span class='fa fa-search'></span><input></td></tr>
-			<tr><td class="inner" style="height:100px;"><a>&nbsp;</a></td></tr>
-
-			<tr><td class="upper"><a>ROLES</a></td></tr>
-			<tr><td class="upper"><a id="gallery">GALLERY</a></td></tr>
-			<tr><td class="upper"><a>SPEECHES</a></td></tr>
-			<tr><td class="upper"><a id="contact">CONTACT</a></td></tr>
-			<tr><td class="upper"><a></a></td></tr>
-			<tr><td class="upper"><span class='fa fa-search'></span><input></td></tr>
-			<tr><td class="upper"><a>&nbsp;</a></td></tr>
-		</table>
-	</div>
-	<div class="page home-page">
-		<menu>
-			<a id="bars"><span class='fa fa-bars'></span></a>
-		</menu>
-		<header>&nbsp;&nbsp;&nbsp;&nbsp;Her Highness<br>SHEIKHA MOZA<br>BINT NASSER</header>
-		<h3>Chairperson of Qatar Foundation<br>Vice Chair of the Supreme<br>Council of Education</h3>
-		<img src="img/home.jpg">
-		<h3>“Education is a fundamental right<br>A right that no one should be deprived of.”</h3>
-		<footer>
-			<div class="lang"><a>AR</a></div>
-			<div class="lang"><a>EN</a></div>
-		</footer>
-		<div id="bottom"></div>
-	</div>
-	<div class="page contact-page">
-		<menu>
-			<a id="home"><span class='fa fa-home'></span></a>
-			<a id="bars"><span class='fa fa-bars'></span></a>
-		</menu>
-		<section><span class='fa fa-angle-left'></span>&nbsp;CONTACT</section>
-		<article>
-			<strong>Media Enquiries</strong><br>
-			<br><span>Jane Smith</span>
-			<br>Media Officer
-			<br>jane.smith@mozabintnasser.qa
-			<br><div id="phone">+974 3387 2457</div>
-		</article>
-		<article>
-			<strong>Other Enquiries</strong><br>
-			<br><span>James Bond</span>
-			<br>Media Officer
-			<br>james.bond@mozabintnasser.qa
-			<br><div id="phone">+974 3387 2457</div>
-			<br><span>Sarah Heart</span>
-			<br>Media Officer
-			<br>sarah.heart@mozabintnasser.qa
-			<br><div id="phone">+974 3387 2457</div>
-		</article>
-	</div>
-	<div class="page gallery-page">
-		<menu>
-			<a id="home"><span class='fa fa-home'></span></a>
-			<a id="bars"><span class='fa fa-bars'></span></a>
-		</menu>
-		<section><span class='fa fa-angle-left'></span>&nbsp;GALLERY</section>
-		<article>
-			<strong>Education Above All</strong><br>
-			<span>November, 2014</span><br>
-			<br>Global initiative protecting the right of children and youth to quality education.<br>
-			<img src="img/img2.jpg">
-			<div id="share">SHARE</div>
-		</article>
-		<article>
-			<strong>The Qatari-Japanese Friendship</strong><br>
-			<span>March, 2014</span><br>
-			<br>Our partnership can be symbolised by the Qatari-Japanese Friendship Fund.<br>
-			<img src="img/img3.jpg">
-			<div id="share">SHARE</div>
-		</article>
-		<article>
-			<strong>Universal Primary Education</strong><br>
-			<span>March, 2014</span><br>
-			<br>HH wants to galvanise the international community to provide education for 58 million children around the world without access to school.<br>
-			<img src="img/img4.jpg">
-			<div id="share">SHARE</div>
-		</article>
-		<article>
-			<strong>Protection of Education in Insecurity and Armed Conflict</strong><br>
-			<span>February, 2014</span><br>
-			<br>61 million children around the world are not in school, many of them from Arab countries.<br>
-			<img src="img/img5.jpg">
-			<div id="share">SHARE</div>
-		</article>
-	</div>
 	<script type="text/javascript">
-		$('#bars, .fa-angle-left').click(function(){
-			$('.page').hide();
-			$('.inner').hide();
-			$('.fa-angle-left').hide();
-			$('#news').removeClass("selected");
-			$('.mobile-navigation').fadeIn();
-			$('.upper').fadeIn();
+		$(document).ready(function () {
+			popitup('samakanbour.github.io/hho/home');
 		})
-		$('a .fa-home').click(function(){
-			$('.mobile-navigation').fadeOut();
-			$('.page').hide();
-			$('.inner').hide();
-			$('.fa-angle-left').hide();
-			$('#news').removeClass("selected");
-			$('.home-page').delay(1000).fadeIn();
-		})
-		$('#news').click(function(){
-			$('#news').addClass("selected");
-			$('.fa-angle-left').fadeIn();
-			$('.upper').fadeOut();
-			$('.inner').delay(1000).fadeIn();
-		})
-		$('#contact').click(function(){
-			$('.mobile-navigation').fadeOut();
-			$('.contact-page').delay(1000).fadeIn();
-		})
-		$('#gallery').click(function(){
-			$('.mobile-navigation').fadeOut();
-			$('.gallery-page').delay(1000).fadeIn();
-		})
+		function popitup(url) {
+			newwindow=window.open(url,'name','height=700,width=500');
+			if (window.focus) {newwindow.focus()}
+			return false;
+		}
 	</script>
 </body>
 </html>
