@@ -15,14 +15,14 @@
 </head>
 
 <body>
-	<h3>If you are on a Desktop platform, a pop-up of the mobile site will appear.</h3>
-	<h3>If you are on a Mobile platform, please click <a href="home" style="color: blue;">here</a>.</h3>
+	<h3>If you are on a desktop platform, a pop-up window of the site will appear.</h3>
+	<h3>If you are on a mobile platform, kindly click <a href="home" style="color: blue;">here</a>.</h3>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			popitup('home');
 		})
 		function popitup(url) {
-			newwindow=window.open(url,'name','height=600,width=400');
+			newwindow=window.open(url,'name','height=600,width=360');
 			if (window.focus) {newwindow.focus()}
 			return false;
 		}
